@@ -13,9 +13,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is a test"
       - run: sudo apt-get install -y at
-      - run: echo "This is a test" | at now
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - run: gh workflow run action-to-run.yml | at now
       - run: gh workflow run action-to-run.yml | at now +5 minutes
       - run: gh workflow run action-to-run.yml | at now +10 minutes
