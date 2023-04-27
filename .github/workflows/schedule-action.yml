@@ -20,7 +20,7 @@ jobs:
       - run: sudo apt-get install -y at
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: echo "gh workflow run action-to-run.yml" | at now
+      - run: gh workflow run action-to-run.yml | at now
       - run: echo "gh workflow run action-to-run.yml | at now"
       - run: echo "gh workflow run action-to-run.yml | at now +5 minutes"
       - run: echo "gh workflow run action-to-run.yml | at now +10 minutes"
