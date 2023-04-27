@@ -2,8 +2,13 @@
 
 name: GitHub Actions Workflow scheduler to run an adhoc action at a time relative to now
 run-name: ${{ github.actor }} is scheduling a GitHub Action to run later🚀
+
 on: 
   workflow_dispatch:
+
+env:
+    GH_TOKEN: ${{ github.token }}
+  
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
