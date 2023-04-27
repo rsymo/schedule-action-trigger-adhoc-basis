@@ -1,6 +1,7 @@
-name: GitHub Actions Demo
+name: GitHub Actions Demo - that runs when called from the scheduled Actions Workflow file
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: 
+  workflow_call:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
