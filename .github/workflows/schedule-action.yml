@@ -13,6 +13,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "This is a test"
+      - run: echo "This is a test" | at now
       - run: gh workflow run action-to-run.yml | at now
       - run: gh workflow run action-to-run.yml | at now +5 minutes
       - run: gh workflow run action-to-run.yml | at now +10 minutes
