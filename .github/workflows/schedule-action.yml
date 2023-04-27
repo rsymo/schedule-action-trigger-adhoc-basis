@@ -1,5 +1,9 @@
 # This is a manually called scheduling job that calls another GitHub Actions YAML file to run at a relative time to the launch of this job (or scheduled time), it uses the linux AT command.
 
+# Repo Settings permissions: Change Settings -> Actions -> General -> Workflow Permissions to allow read and write, as per: https://github.com/actions/first-interaction/issues/10
+
+# Manually launch this job, and it will schedule and launch the other jobs.
+
 name: GitHub Actions Workflow scheduler to run an adhoc action at a time relative to now
 run-name: ${{ github.actor }} is scheduling a GitHub Action to run later🚀
 
